@@ -1,3 +1,4 @@
+#include "main.h"
 
 /* FONCTION POUR PRINT UN CHAR */
 /**
@@ -5,9 +6,9 @@
  * @c: char to print
  */
 
-void print_char(char *c)
+void print_char(va_list c)
 {
-	_putchar(c);
+	_putchar(va_arg(c, int));
 }
 
 /* FONCTION POUR PRINT UN STRING */
@@ -16,10 +17,13 @@ void print_char(char *c)
  * @str: string to print
  */
 
-void print_string(char *str)
+void print_string(va_list s) 
 {
+	char *str;
 	int i;
 
+	str = va_arg(s, char *);
 	for (i = 0; str[i] != '\0'; i++)
 		_putchar(str[i]);
 }
+

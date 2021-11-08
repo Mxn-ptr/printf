@@ -1,7 +1,8 @@
 #ifndef MAIN_H
 #define MAIN_H
-
 #include <stdarg.h>
+#include <stdlib.h>
+
 /* lib function*/
 int _abs(int n);
 int _isalpha(int c);
@@ -18,7 +19,7 @@ char *rot13(char *str);
 char *_strcat(char *dest, char *src);
 char *_strchr(char *s, char c);
 int _strcmp(char *s1, char *s2);
-char *_strcpy(char *dest, char *src)
+char *_strcpy(char *dest, char *src);
 char *string_toupper(char *str);
 unsigned int _strlen(char *s);
 char *_strncat(char *dest, char *src, int n);
@@ -28,6 +29,11 @@ char *_strstr(char *haystack, char *needle);
 char **strtow(char *str);
 void swap_int(int *a, int *b);
 
+/*printf func*/
+void print_string(va_list s);
+void print_char(va_list c);
+int _printf(const char *format, ...);
+
 /**
  * struct format - struct for check the letter
  * @letter: letter to check
@@ -36,8 +42,8 @@ void swap_int(int *a, int *b);
 
 typedef struct format
 {
-	char *letter;
+	char letter;
 	void (*check)(va_list arg);
-}
+} format_t;
 
 #endif /*MAIN_H*/
