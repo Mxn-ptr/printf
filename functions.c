@@ -27,3 +27,11 @@ void print_string(va_list s)
 		_putchar(str[i]);
 }
 
+void print_int(va_list s)
+{
+	int n;
+
+	n = va_arg(s, int);
+
+	print_number(n);
+}
