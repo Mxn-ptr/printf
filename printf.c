@@ -3,7 +3,7 @@
 int _printf(const char *format, ...)
 {
 	va_list argument;
-	int i, j = 0;
+	int i, j;
 	format_t symbole[] = {
 		{'s', print_string},
 		{'c', print_char},
@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-
+	i = 0;
 	va_start(argument, format);
 	while (format[i])
 	{
