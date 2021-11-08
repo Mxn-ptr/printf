@@ -29,6 +29,10 @@ char *_strstr(char *haystack, char *needle);
 char **strtow(char *str);
 void swap_int(int *a, int *b);
 void binary(int nb);
+void octo(int nb);
+void hex_up(int nb);
+void hex_low(int nb);
+void print_number_u(unsigned int n);
 
 /*printf func*/
 void print_string(va_list s);
@@ -36,6 +40,10 @@ void print_char(va_list c);
 int _printf(const char *format, ...);
 void print_int(va_list s);
 void print_binary(va_list b);
+void print_octo(va_list b);
+void print_hex_up(va_list b);
+void print_hex_low(va_list b);
+void print_unsigned(va_list u);
 
 /**
  * struct format - struct for check the letter

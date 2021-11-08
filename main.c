@@ -21,5 +21,9 @@ _printf("Let's try to printf a simple sentence.\n");
     _printf("%d\n", d);
     _printf("%i\n", e);
 	_printf("%b\n", 98);
+    _printf("%o\n", 98);
+    _printf("%X\n", 45);
+    _printf("%x gygyggy %x vfv %s\n", 255, 78, "Jordan");
+    _printf("%u\n",24342343);
     return (0);
 }

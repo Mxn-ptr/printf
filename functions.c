@@ -40,3 +40,23 @@ void print_binary(va_list b)
 {
 	binary(va_arg(b, int));
 }
+
+void print_octo(va_list o)
+{
+	octo(va_arg(o, int));
+}
+
+void print_hex_up(va_list X)
+{
+	hex_up(va_arg(X, int));
+}
+
+void print_hex_low(va_list x)
+{
+	hex_low(va_arg(x, int));
+}
+
+void print_unsigned(va_list u)
+{
+	print_number_u(va_arg(u, unsigned int));
+}
