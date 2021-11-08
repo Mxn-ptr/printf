@@ -35,3 +35,8 @@ void print_int(va_list s)
 
 	print_number(n);
 }
+
+void print_binary(va_list b)
+{
+	binary(va_arg(b, int));
+}

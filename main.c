@@ -20,6 +20,6 @@ _printf("Let's try to printf a simple sentence.\n");
     _printf("String:[%s]\n", "I am a string !");
     _printf("%d\n", d);
     _printf("%i\n", e);
-
+	_printf("%b\n", 98);
     return (0);
 }

@@ -7,6 +7,9 @@ int _printf(const char *format, ...)
     format_t symbole[] = {
         {'s', print_string},
         {'c', print_char},
+        {'d', print_int},
+        {'i', print_int},
+        {'b', print_binary},
         {'\0', NULL},
     };
 

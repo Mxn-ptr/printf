@@ -28,11 +28,14 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 char **strtow(char *str);
 void swap_int(int *a, int *b);
+void binary(int nb);
 
 /*printf func*/
 void print_string(va_list s);
 void print_char(va_list c);
 int _printf(const char *format, ...);
+void print_int(va_list s);
+void print_binary(va_list b);
 
 /**
  * struct format - struct for check the letter
