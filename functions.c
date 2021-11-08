@@ -20,11 +20,13 @@ void print_char(va_list c)
 void print_string(va_list s) 
 {
 	char *str;
-	int i;
 
 	str = va_arg(s, char *);
-	for (i = 0; str[i] != '\0'; i++)
-		_putchar(str[i]);
+	while (*str != '\0')
+	{
+		_putchar(*str);
+		str++;
+	}
 }
 
 void print_int(va_list s)
