@@ -19,7 +19,7 @@ char *_strchr(char *s, char c);
 int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src)
 char *string_toupper(char *str);
-int _strlen(char *s);
+unsigned int _strlen(char *s);
 char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
 char *_strpbrk(char *s, char *accept);

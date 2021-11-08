@@ -1,21 +1,6 @@
 #include "main.h"
 
 /**
-* _strlen - determine se sizeof ol string
-* @s: string
-* Return: the size of s
-*/
-
-unsigned int _strlen(char *s)
-{
-	unsigned int i = 0;
-
-	while (s[i])
-		i++;
-	return (i);
-}
-
-/**
 * strtow - Each element of this array should contain
 * a single word, null-terminated
 * @str: string

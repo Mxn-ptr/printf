@@ -6,7 +6,7 @@
 * Return: the size of str
 */
 
-int _strlen(char *s)
+unsigned int _strlen(char *s)
 {
 	unsigned int i;
 
