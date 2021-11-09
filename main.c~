@@ -1,0 +1,17 @@
+#include "main.h"
+
+int main()
+{
+	char *str = "Salut, les amis";
+	char c = '!';
+	int i = 14;
+	int j = 18328;
+
+	_printf("%s\n", str);
+	_printf("%c\n"; c);
+	_printf("%d\n", i);
+	_printf("%i\n", j);
+	_printf("%s%c\n", str, c);
+	_printf("%s J'ai %d ans.\n", str, i);
+	return (0);
+}
