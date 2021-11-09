@@ -11,6 +11,7 @@ int _isalpha(int c);
 int _isdigit(int c);
 int _islower(int c);
 int _isupper(int c);
+int _isprintable(int c);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_memset(char *s, char b, unsigned int n);
 void print_array(int *a, int n);

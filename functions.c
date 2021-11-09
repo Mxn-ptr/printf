@@ -7,9 +7,12 @@
  * Return: 1
  */
 
-int print_char(va_list c)
-{
-	_putchar(va_arg(c, int));
+int print_char(va_list list)
+{	
+	char c = 0;
+
+	c = va_arg(list, int);
+		_putchar(c);
 	return (1);
 }
 
@@ -23,14 +26,13 @@ int print_char(va_list c)
 int print_string(va_list s)
 {
 	int i;
-	char *str;
+	char *str = NULL;
 
 	i = 0;
-	str = va_arg(s, char *);
-	if (str == NULL)
+	if ((str = va_arg(s, char *)) == NULL)
 	{
 		_putstr("(null)");
-		return (5);
+		return (6);
 	}
 	while (str[i] != '\0')
 	{
