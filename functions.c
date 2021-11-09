@@ -6,9 +6,10 @@
  * @c: char to print
  */
 
-void print_char(va_list c)
+int print_char(va_list c)
 {
 	_putchar(va_arg(c, int));
+	return (1);
 }
 
 /* FONCTION POUR PRINT UN STRING */
@@ -17,48 +18,65 @@ void print_char(va_list c)
  * @str: string to print
  */
 
-void print_string(va_list s)
+int print_string(va_list s)
 {
+	int i;
 	char *str;
 
+	i = 0;
 	str = va_arg(s, char *);
-	while (*str != '\0')
+	while (str[i] != '\0')
 	{
-		_putchar(*str);
-		str++;
+		_putchar(str[i]);
+		i++;
 	}
+	return (i);
 }
 
-void print_int(va_list s)
+int print_int(va_list s)
 {
 	int n;
 
-	n = va_arg(s, int);
-
-	print_number(n);
+	n = print_number(va_arg(s, int), 0);
+	return (n);
 }
 
-void print_binary(va_list b)
+int print_binary(va_list b)
 {
-	binary(va_arg(b, int));
+	int n;
+
+	n = binary(va_arg(b, int), 0);
+	return (n);
 }
 
-void print_octo(va_list o)
+int print_octo(va_list o)
 {
-	octo(va_arg(o, int));
+	int n;
+
+	n = octo(va_arg(o, unsigned int), 0);
+	return (n);
 }
 
-void print_hex_up(va_list X)
+int print_hex_up(va_list X)
 {
-	hex_up(va_arg(X, int));
+	int n;
+
+	n = hex_up(va_arg(X, unsigned int), 0);
+	return (n);
 }
 
-void print_hex_low(va_list x)
+int print_hex_low(va_list x)
 {
-	hex_low(va_arg(x, int));
+	int n;
+
+	n = hex_low(va_arg(x, unsigned int), 0);
+	return (n);
 }
 
-void print_unsigned(va_list u)
+int print_unsigned(va_list u)
 {
-	print_number_u(va_arg(u, unsigned int));
+	int n;
+
+	n = print_number_u(va_arg(u, unsigned int), 0);
+	return (n);
 }

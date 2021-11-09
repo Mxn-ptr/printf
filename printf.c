@@ -1,7 +1,11 @@
 #include "main.h"
 
 static int check_arg(va_list arg, char *format, format_t *symbole);
-
+/**
+* printf - print in stdout a format string
+* @format: string with format
+*
+*/
 int _printf(const char *format, ...)
 {
 	int bytes;
@@ -40,12 +44,11 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 			_putchar(format[i]);
 			++i;
 		}
+		
 		j = 0;
-		if (format[i] == '%')
-			i++;
 		while (symbole[j].letter != '\0')
 		{
-			if (symbole[j].letter == format[i])
+			if (symbole[j].letter == format[i + 1])
 			{
 				symbole[j].check(arg);
 				break;
@@ -53,7 +56,7 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 			j++;
 		}
 		if (format[i])
-			i++;
+			i += 2;
 	}
 	return (i);
 }

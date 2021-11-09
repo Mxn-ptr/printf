@@ -12,7 +12,7 @@ int _isupper(int c);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_memset(char *s, char b, unsigned int n);
 void print_array(int *a, int n);
-void print_number(int n);
+int print_number(int n, int size);
 int _putchar(char c);
 void _puts(char *str);
 char *rot13(char *str);
@@ -28,22 +28,22 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 char **strtow(char *str);
 void swap_int(int *a, int *b);
-void binary(int nb);
-void octo(int nb);
-void hex_up(int nb);
-void hex_low(int nb);
-void print_number_u(unsigned int n);
+int binary(unsigned int nb, int size);
+int octo(unsigned int nb, int size);
+int hex_up(unsigned int nb, int size);
+int hex_low(unsigned int nb, int size);
+unsigned int print_number_u(unsigned int n, unsigned int size);
 
 /*printf func*/
-void print_string(va_list s);
-void print_char(va_list c);
+int print_string(va_list s);
+int print_char(va_list c);
 int _printf(const char *format, ...);
-void print_int(va_list s);
-void print_binary(va_list b);
-void print_octo(va_list b);
-void print_hex_up(va_list b);
-void print_hex_low(va_list b);
-void print_unsigned(va_list u);
+int print_int(va_list s);
+int print_binary(va_list b);
+int print_octo(va_list b);
+int print_hex_up(va_list b);
+int print_hex_low(va_list b);
+int print_unsigned(va_list u);
 
 /**
  * struct format - struct for check the letter
@@ -54,7 +54,7 @@ void print_unsigned(va_list u);
 typedef struct format
 {
 	char letter;
-	void (*check)(va_list arg);
+	int (*check)(va_list arg);
 } format_t;
 
 #endif /*MAIN_H*/

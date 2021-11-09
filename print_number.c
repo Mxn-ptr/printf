@@ -6,7 +6,7 @@
 * @n: integer
 * Return: nothing
 */
-void print_number(int n)
+int print_number(int n, int size)
 {
 	unsigned int n_1;
 
@@ -17,8 +17,9 @@ void print_number(int n)
 	}
 	n_1 = n;
 	if (n_1 / 10)
-		print_number(n_1 / 10);
+		print_number(n_1 / 10, size + 1);
 	_putchar((n_1 % 10) + '0');
+	return (size);
 }
 
 /**
@@ -27,9 +28,10 @@ void print_number(int n)
 * @n: integer
 * Return: nothing
 */
-void print_number_u(unsigned int n)
+unsigned int print_number_u(unsigned int n, unsigned int size)
 {
 	if (n / 10)
-		print_number_u(n / 10);
+		print_number_u(n / 10, size + 1);
 	_putchar((n % 10) + '0');
+	return (size);
 }
