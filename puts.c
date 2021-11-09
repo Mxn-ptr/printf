@@ -19,6 +19,11 @@ void _puts(char *str)
 	_putchar('\n');
 }
 
+/**
+* _putstr - print a string in stdout
+* @str: string
+* Return: noting
+*/
 void _putstr(char *str)
 {
 	unsigned int i;
