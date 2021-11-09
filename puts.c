@@ -24,6 +24,7 @@ void _puts(char *str)
 * @str: string
 * Return: noting
 */
+
 void _putstr(char *str)
 {
 	unsigned int i;

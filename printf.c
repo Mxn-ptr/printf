@@ -1,39 +1,5 @@
 #include "main.h"
 
-static int check_arg(va_list arg, char *format, format_t *symbole);
-
-/**
-* _printf - print in stdout a format string
-* @format: string with format
-* Return: size of characters
-*/
-int _printf(const char *format, ...)
-{
-	int bytes;
-	va_list argument;
-	format_t symbole[] = {
-		{'s', print_string},
-		{'c', print_char},
-		{'d', print_int},
-		{'i', print_int},
-		{'b', print_binary},
-		{'o', print_octo},
-		{'x', print_hex_low},
-		{'X', print_hex_up},
-		{'u', print_unsigned},
-		{'r', print_rev},
-		{'R', print_rot13},
-		{'\0', NULL},
-	};
-
-	if (format == NULL)
-		return (-1);
-
-	va_start(argument, format);
-	bytes = check_arg(argument, (char *)format, symbole);
-	va_end(argument);
-	return (bytes);
-}
 
 /**
  * check_arg - check to found the argument
@@ -79,3 +45,39 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 	}
 	return ((i  - 1) + size);
 }
+
+/**
+* _printf - print in stdout a format string
+* @format: string with format
+* Return: size of characters
+*/
+
+int _printf(const char *format, ...)
+{
+	int bytes;
+	va_list argument;
+	format_t symbole[] = {
+		{'s', print_string},
+		{'c', print_char},
+		{'d', print_int},
+		{'i', print_int},
+		{'b', print_binary},
+		{'o', print_octo},
+		{'x', print_hex_low},
+		{'X', print_hex_up},
+		{'u', print_unsigned},
+		{'r', print_rev},
+		{'R', print_rot13},
+		{'\0', NULL},
+	};
+
+	if (format == NULL)
+		return (-1);
+
+	va_start(argument, format);
+	bytes = check_arg(argument, (char *)format, symbole);
+	va_end(argument);
+	return (bytes);
+}
+
+
