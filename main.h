@@ -12,7 +12,7 @@ int _isupper(int c);
 char *_memcpy(char *dest, char *src, unsigned int n);
 char *_memset(char *s, char b, unsigned int n);
 void print_array(int *a, int n);
-int print_number(int n, int size);
+void print_number(int n, int *size);
 int _putchar(char c);
 void _puts(char *str);
 char *rot13(char *str);
@@ -28,11 +28,11 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 char **strtow(char *str);
 void swap_int(int *a, int *b);
-int binary(unsigned int nb, int size);
-int octo(unsigned int nb, int size);
-int hex_up(unsigned int nb, int size);
-int hex_low(unsigned int nb, int size);
-unsigned int print_number_u(unsigned int n, unsigned int size);
+void binary(unsigned int nb, int *size);
+void octo(unsigned int nb, int *size);
+void hex_up(unsigned int nb, int *size);
+void hex_low(unsigned int nb, int *size);
+void print_number_u(unsigned int n, unsigned int *size);
 
 /*printf func*/
 int print_string(va_list s);

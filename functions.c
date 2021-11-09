@@ -35,48 +35,48 @@ int print_string(va_list s)
 
 int print_int(va_list s)
 {
-	int n;
+	int n = 0;
 
-	n = print_number(va_arg(s, int), 0);
+	print_number(va_arg(s, int), &n);
 	return (n);
 }
 
 int print_binary(va_list b)
 {
-	int n;
+	int n = 0;
 
-	n = binary(va_arg(b, int), 0);
+	binary(va_arg(b, int), &n);
 	return (n);
 }
 
 int print_octo(va_list o)
 {
-	int n;
+	int n = 0;
 
-	n = octo(va_arg(o, unsigned int), 0);
+	octo(va_arg(o, unsigned int), &n);
 	return (n);
 }
 
 int print_hex_up(va_list X)
 {
-	int n;
+	int n = 0;
 
-	n = hex_up(va_arg(X, unsigned int), 0);
+	hex_up(va_arg(X, unsigned int), &n);
 	return (n);
 }
 
 int print_hex_low(va_list x)
 {
-	int n;
+	int n = 0;
 
-	n = hex_low(va_arg(x, unsigned int), 0);
+	hex_low(va_arg(x, unsigned int), &n);
 	return (n);
 }
 
 int print_unsigned(va_list u)
 {
-	int n;
+	unsigned int n = 0;
 
-	n = print_number_u(va_arg(u, unsigned int), 0);
+	print_number_u(va_arg(u, unsigned int), &n);
 	return (n);
 }
