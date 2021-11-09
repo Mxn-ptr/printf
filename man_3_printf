@@ -1,0 +1,52 @@
+.TH _PRINTF(1)
+
+.SH NAME
+_printf - copy of printf
+
+.SH SYNOPSIS
+.B int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+The function _printf produce output according to a format as described below. It write output to stdout, the standra output stream.
+
+This function write the output under the control of a format string that specifies how subsequent arguments are converted for output.
+
+.SH Conversion specifiers
+A character that specifies the type of conversion to be applied. The conversion specifiers and their meanings are :
+
+.TP
+.B
+d, i
+The int argument is converted to signed decimal notation.
+
+.TP
+.B
+o, u, x, X
+The unsigned int argument is converted to unsigned octal (o), unsigned decimal (u), or unsigned hexadecimal (x and X) notation. The letters abcdef are used for x conversions and the letters ABCDEF are used for X conversions.
+
+.TP
+.B
+c
+The int argument is converted to an unsigned char, and the resulting character is written.
+
+.TP
+.B
+s
+The const char* argument is expected to be a poitner to an array of character type (pointer to a string). Characters from the array are written up to (but not including) a terminal null byte ('\\0').
+
+.SH RETURN VALUE
+Upon sucessful return, the function return the number of characters printed (excluding the null byte used to end output to strings).
+
+If the output was truncated due to this limit, then the return vaue is the number of characters (excluding the terminating null byte) which would have been written to the final string if enough space had been available. Thus, a return value of size or more means that the output was truncated.
+
+If an output error is encountered, a negative value is returned.
+
+.SH BUGS
+None known at this time.
+
+.SH SEE ALSO
+printf(3)
+
+.SH CREDITS
+This man page is created only for an Holberton School's project by Jordan Mpounza and Maxence Potier.
+
