@@ -47,5 +47,6 @@ int main(void)
     _printf("%r\n", rev);
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
+    _printf("%R\n", rev);
     return (0);
 }

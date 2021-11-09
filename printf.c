@@ -21,6 +21,7 @@ int _printf(const char *format, ...)
 		{'X', print_hex_up},
 		{'u', print_unsigned},
 		{'r', print_rev},
+		{'R', print_rot13},
 		{'\0', NULL},
 	};
 
