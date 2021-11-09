@@ -15,9 +15,9 @@ int main(void)
     unsigned int ui;
     void *addr;
 
-    size = _printf("je suis le roi %d.\n", 1234);
+    size = _printf("je suis le roi %d.\n", 1234445);
     _printf("%d\n", size);
-    size = printf("je suis le roi %d.\n", 1234);
+    size = printf("je suis le roi %d.\n", 1234445);
     printf("%d\n", size);
     len = _printf("Let's try to printf a simple sentence.\n");
     len2 = printf("Let's try to printf a simple sentence.\n");
