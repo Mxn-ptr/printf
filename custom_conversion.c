@@ -15,7 +15,7 @@ int print_rev(va_list strings)
 	str = va_arg(strings, char *);
 
 	if (str == NULL)
-		str = "\0";
+		str = "r%";
 
 	while (str[i])
 		i++;
