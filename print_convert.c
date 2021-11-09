@@ -1,3 +1,6 @@
+#include "main.h"
+#include <stdarg.h>
+
 /**
  * print_binary - prints the number in binary
  * @b: va_list
