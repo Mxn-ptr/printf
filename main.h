@@ -1,9 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
+#include "format.h"
 #include <stdarg.h>
 #include <stdlib.h>
 
 /* lib function*/
+int _printf(const char *format, ...);
 int _abs(int n);
 int _isalpha(int c);
 int _isdigit(int c);
@@ -34,30 +36,5 @@ void hex_up(unsigned int nb, int *size);
 void hex_low(unsigned int nb, int *size);
 void print_number_u(unsigned int n, unsigned int *size);
 void _putstr(char *str);
-
-/*printf func*/
-int print_string(va_list s);
-int print_char(va_list c);
-int _printf(const char *format, ...);
-int print_int(va_list s);
-int print_binary(va_list b);
-int print_octo(va_list b);
-int print_hex_up(va_list b);
-int print_hex_low(va_list b);
-int print_unsigned(va_list u);
-int print_rev(va_list strings);
-int print_rot13(va_list s);
-
-/**
- * struct format - struct for check the letter
- * @letter: letter to check
- * @check: function to check
- */
-
-typedef struct format
-{
-	char letter;
-	int (*check)(va_list arg);
-} format_t;
 
 #endif /*MAIN_H*/
