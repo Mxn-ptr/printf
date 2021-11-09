@@ -52,12 +52,6 @@ int print_int(va_list s)
 	int nb;
 
 	nb = va_arg(s, int);
-	if (nb == 0)
-	{
-		_putchar('0');
-		return (0);
-	}
-
 	print_number(nb, &n);
 	return (n);
 }

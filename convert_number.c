@@ -10,9 +10,9 @@ void binary(unsigned int nb, int *size)
 {
 	if (nb / 2)
 	{
-		*size += 1;
 		binary(nb / 2, size);
 	}
+	*size += 1;
 	_putchar('0' + nb % 2);
 }
 
@@ -26,11 +26,10 @@ void octo(unsigned int nb, int *size)
 {
 	if (nb / 8)
 	{
-		*size += 1;
 		octo(nb / 8, size);
 	}
+	*size += 1;
 	_putchar('0' + nb % 8);
-
 }
 
 
@@ -45,9 +44,9 @@ void hex_up(unsigned int nb, int *size)
 
 	if (nb / 16)
 	{
-		*size += 1;
 		hex_up(nb / 16, size);
 	}
+	*size += 1;
 	if (nb % 16 < 10)
 		_putchar('0' + nb % 16);
 	else
@@ -64,9 +63,9 @@ void hex_low(unsigned int nb, int *size)
 {
 	if (nb / 16)
 	{
-		*size += 1;
 		hex_low(nb / 16, size);
 	}
+	*size += 1;
 	if (nb % 16 < 10)
 		_putchar('0' + nb % 16);
 	else

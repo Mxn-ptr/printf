@@ -21,6 +21,7 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 		{
 			_putchar(format[i]);
 			++i;
+			size++;
 		}
 		j = 0;
 		if (format[i] == '%')
@@ -28,6 +29,7 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 			i++;
 			if (format[i] == '%')
 			{
+				size++;
 				_putchar('%');
 			}
 		}
@@ -43,7 +45,7 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 		if (format[i])
 			i++;
 	}
-	return ((i  - 1) + size);
+	return (size);
 }
 
 /**
