@@ -1,6 +1,6 @@
 #include "main.h"
 
-int check_arg(va_list arg, char *format, format_t *symbole);
+static int check_arg(va_list arg, char *format, format_t *symbole);
 /**
 * _printf - print in stdout a format string
 * @format: string with format
@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
  * Return: size
  */
 
-int check_arg(va_list arg, char *format, format_t *symbole)
+static int check_arg(va_list arg, char *format, format_t *symbole)
 {
 	int i, j, size;
 
