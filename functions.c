@@ -30,7 +30,7 @@ int print_string(va_list s)
 	if (str == NULL)
 	{
 		_putstr("(null)");
-		return (6);
+		return (5);
 	}
 	while (str[i] != '\0')
 	{
@@ -49,7 +49,15 @@ int print_string(va_list s)
 int print_int(va_list s)
 {
 	int n = 0;
+	int nb;
 
-	print_number(va_arg(s, int), &n);
+	nb = va_arg(s, int);
+	if (nb == 0)
+	{
+		_putchar('0');
+		return (0);
+	}
+
+	print_number(nb, &n);
 	return (n);
 }
