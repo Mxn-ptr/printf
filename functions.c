@@ -3,15 +3,15 @@
 /* FONCTION POUR PRINT UN CHAR */
 /**
  * print_char - print a char
- * @c: char to print
+ * @a: char to print
  * Return: 1
  */
 
-int print_char(va_list list)
-{	
-	char c = 0;
+int print_char(va_list a)
+{
+	int c;
 
-	c = va_arg(list, int);
+	c = va_arg(a, int);
 		_putchar(c);
 	return (1);
 }
@@ -29,7 +29,8 @@ int print_string(va_list s)
 	char *str = NULL;
 
 	i = 0;
-	if ((str = va_arg(s, char *)) == NULL)
+	str = va_arg(s, char *);
+	if (str == NULL)
 	{
 		_putstr("(null)");
 		return (6);
