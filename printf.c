@@ -47,7 +47,13 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 		}
 		j = 0;
 		if (format[i] == '%')
+		{
 			i++;
+			if (format[i] == '%')
+			{
+				_putchar('%');
+			}
+		}
 		while (symbole[j].letter != '\0')
 		{
 			if (symbole[j].letter == format[i])
