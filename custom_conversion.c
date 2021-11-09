@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_rev - prints the string in reverse
+ * @strings: va_list
+ * Return: size of the string
+ */
+
 int print_rev(va_list strings)
 {
 	int i, j;
@@ -23,5 +29,3 @@ int print_rev(va_list strings)
 	}
 	return (i);
 }
-
-	

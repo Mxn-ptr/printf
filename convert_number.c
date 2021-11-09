@@ -3,10 +3,10 @@
 /**
 * binary - convert decimal to binary
 * @nb: number
-*
+* @size: size for printf
 */
 
-void binary(unsigned nb, int *size)
+void binary(unsigned int nb, int *size)
 {
 	if (nb / 2)
 	{
@@ -19,7 +19,7 @@ void binary(unsigned nb, int *size)
 /**
 * octo - convert decimal to octal
 * @nb: number
-*
+* @size: size for printf
 */
 
 void octo(unsigned int nb, int *size)
@@ -37,7 +37,7 @@ void octo(unsigned int nb, int *size)
 /**
 * hex_up - convert decimal to hexadecimal uppercase
 * @nb: number
-*
+* @size: size for printf
 */
 
 void hex_up(unsigned int nb, int *size)
@@ -57,7 +57,7 @@ void hex_up(unsigned int nb, int *size)
 /**
 * hex_low - convert decimal to hexadecimal lowercase
 * @nb: number
-*
+* @size: size for printf
 */
 
 void hex_low(unsigned int nb, int *size)

@@ -2,9 +2,9 @@
 #include <stdio.h>
 static int check_arg(va_list arg, char *format, format_t *symbole);
 /**
-* printf - print in stdout a format string
+* _printf - print in stdout a format string
 * @format: string with format
-*
+* Return: size of characters
 */
 int _printf(const char *format, ...)
 {
@@ -20,6 +20,7 @@ int _printf(const char *format, ...)
 		{'x', print_hex_low},
 		{'X', print_hex_up},
 		{'u', print_unsigned},
+		{'r', print_rev},
 		{'\0', NULL},
 	};
 
@@ -31,6 +32,14 @@ int _printf(const char *format, ...)
 	va_end(argument);
 	return (bytes);
 }
+
+/**
+ * check_arg - check to found the argument
+ * @arg: va_list
+ * @format : format
+ * @symbole : symbole
+ * Return: size
+ */
 
 static int check_arg(va_list arg, char *format, format_t *symbole)
 {
@@ -66,5 +75,5 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 		if (format[i])
 			i++;
 	}
-	return ((i  - 1)+ size);
+	return ((i  - 1) + size);
 }

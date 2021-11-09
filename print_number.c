@@ -4,6 +4,7 @@
 * print_number - print number in output
 *
 * @n: integer
+* @size: size for printf
 * Return: nothing
 */
 void print_number(int n, int *size)
@@ -29,6 +30,7 @@ void print_number(int n, int *size)
 * print_number_u - print number in output
 *
 * @n: integer
+* @size: size for printf
 * Return: nothing
 */
 void print_number_u(unsigned int n, unsigned int  *size)

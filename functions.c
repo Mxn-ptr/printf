@@ -4,6 +4,7 @@
 /**
  * print_char - print a char
  * @c: char to print
+ * Return: 1
  */
 
 int print_char(va_list c)
@@ -15,7 +16,8 @@ int print_char(va_list c)
 /* FONCTION POUR PRINT UN STRING */
 /**
  * print_string - print a string
- * @str: string to print
+ * @s: string to print
+ * Return: i - 1
  */
 
 int print_string(va_list s)
@@ -33,50 +35,16 @@ int print_string(va_list s)
 	return (i - 1);
 }
 
+/**
+ * print_int - print an int
+ * @s: va_list for printf
+ * Return: number to print
+ */
+
 int print_int(va_list s)
 {
 	int n = 0;
 
 	print_number(va_arg(s, int), &n);
-	return (n);
-}
-
-int print_binary(va_list b)
-{
-	int n = 0;
-
-	binary(va_arg(b, int), &n);
-	return (n);
-}
-
-int print_octo(va_list o)
-{
-	int n = 0;
-
-	octo(va_arg(o, unsigned int), &n);
-	return (n);
-}
-
-int print_hex_up(va_list X)
-{
-	int n = 0;
-
-	hex_up(va_arg(X, unsigned int), &n);
-	return (n);
-}
-
-int print_hex_low(va_list x)
-{
-	int n = 0;
-
-	hex_low(va_arg(x, unsigned int), &n);
-	return (n);
-}
-
-int print_unsigned(va_list u)
-{
-	unsigned int n = 0;
-
-	print_number_u(va_arg(u, unsigned int), &n);
 	return (n);
 }
