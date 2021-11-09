@@ -1,9 +1,11 @@
 #include "main.h"
 
+static int check_arg(va_list arg, char *format, format_t *symbole);
+
 int _printf(const char *format, ...)
 {
+	int bytes;
 	va_list argument;
-	int i, j;
 	format_t symbole[] = {
 		{'s', print_string},
 		{'c', print_char},
@@ -19,8 +21,18 @@ int _printf(const char *format, ...)
 
 	if (format == NULL)
 		return (-1);
-	i = 0;
+
 	va_start(argument, format);
+	bytes = check_arg(argument, (char *)format, symbole);
+	va_end(argument);
+	return (bytes);
+}
+
+static int check_arg(va_list arg, char *format, format_t *symbole)
+{
+	int i, j;
+
+	i = 0;
 	while (format[i])
 	{
 		while (format[i] && format[i] != '%')
@@ -35,7 +47,7 @@ int _printf(const char *format, ...)
 		{
 			if (symbole[j].letter == format[i])
 			{
-				symbole[j].check(argument);
+				symbole[j].check(arg);
 				break;
 			}
 			j++;
@@ -43,7 +55,5 @@ int _printf(const char *format, ...)
 		if (format[i])
 			i++;
 	}
-	va_end(argument);
 	return (i);
 }
-

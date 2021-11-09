@@ -17,7 +17,7 @@ void print_char(va_list c)
  * @str: string to print
  */
 
-void print_string(va_list s) 
+void print_string(va_list s)
 {
 	char *str;
 

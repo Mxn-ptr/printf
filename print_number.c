@@ -31,5 +31,5 @@ void print_number_u(unsigned int n)
 {
 	if (n / 10)
 		print_number_u(n / 10);
-	_putchar((n % 10) + '0');	
+	_putchar((n % 10) + '0');
 }
