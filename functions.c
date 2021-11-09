@@ -40,7 +40,7 @@ int print_string(va_list s)
 		_putchar(str[i]);
 		i++;
 	}
-	return (i - 1);
+	return (i);
 }
 
 /**
