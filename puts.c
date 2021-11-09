@@ -19,3 +19,14 @@ void _puts(char *str)
 	_putchar('\n');
 }
 
+void _putstr(char *str)
+{
+	unsigned int i;
+
+	i = 0;
+	while (str[i])
+	{
+		_putchar(str[i]);
+		i++;
+	}
+}

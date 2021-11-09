@@ -33,6 +33,7 @@ void octo(unsigned int nb, int *size);
 void hex_up(unsigned int nb, int *size);
 void hex_low(unsigned int nb, int *size);
 void print_number_u(unsigned int n, unsigned int *size);
+void _putstr(char *str);
 
 /*printf func*/
 int print_string(va_list s);
