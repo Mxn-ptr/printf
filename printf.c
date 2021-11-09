@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <stdio.h>
 static int check_arg(va_list arg, char *format, format_t *symbole);
 /**
 * printf - print in stdout a format string
@@ -34,9 +34,10 @@ int _printf(const char *format, ...)
 
 static int check_arg(va_list arg, char *format, format_t *symbole)
 {
-	int i, j;
+	int i, j, size;
 
 	i = 0;
+	size = 0;
 	while (format[i])
 	{
 		while (format[i] && format[i] != '%')
@@ -44,19 +45,20 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 			_putchar(format[i]);
 			++i;
 		}
-		
 		j = 0;
+		if (format[i] == '%')
+			i++;
 		while (symbole[j].letter != '\0')
 		{
-			if (symbole[j].letter == format[i + 1])
+			if (symbole[j].letter == format[i])
 			{
-				symbole[j].check(arg);
+				size += symbole[j].check(arg);
 				break;
 			}
 			j++;
 		}
 		if (format[i])
-			i += 2;
+			i++;
 	}
-	return (i);
+	return ((i  - 1)+ size);
 }

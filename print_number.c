@@ -17,9 +17,12 @@ int print_number(int n, int size)
 	}
 	n_1 = n;
 	if (n_1 / 10)
-		print_number(n_1 / 10, size + 1);
+	{
+		size++;
+		print_number(n_1 / 10, size);
+	}
 	_putchar((n_1 % 10) + '0');
-	return (size);
+	return (size + 1);
 }
 
 /**
