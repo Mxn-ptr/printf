@@ -14,6 +14,7 @@ int main(void)
     int size;
     unsigned int ui;
     void *addr;
+    char *rev = "Salut";
 
     size = _printf("je suis le roi %d.\n", 1234445);
     _printf("%d\n", size);
@@ -43,7 +44,8 @@ int main(void)
     len2 = printf("Percent:[%%]\n");
     _printf("Len:[%d]\n", len);
     printf("Len:[%d]\n", len2);
-    _printf("Unknown:[%r]\n");
+    _printf("%r\n", rev);
+    /* _printf("Unknown:[%r]\n");*/
     /*printf("Unknown:[%r]\n");*/
     return (0);
 }

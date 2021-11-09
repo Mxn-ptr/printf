@@ -44,7 +44,7 @@ int print_octo(va_list b);
 int print_hex_up(va_list b);
 int print_hex_low(va_list b);
 int print_unsigned(va_list u);
-
+int print_rev(va_list strings);
 /**
  * struct format - struct for check the letter
  * @letter: letter to check
