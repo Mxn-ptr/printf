@@ -1,5 +1,20 @@
 #include "main.h"
 
+/**
+ * check_formatage - check to found the argument
+ * @c: char check
+ * Return: size
+ */
+
+static int check_formatage(char c)
+{
+	if (c == '%')
+	{
+		_putchar('%');
+		return (1);
+	}
+	return (0);
+}
 
 /**
  * check_arg - check to found the argument
@@ -25,18 +40,9 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] == '%')
-			{
-				size++;
-				_putchar('%');
-			}
-			else if (format[i] == '\0')
+			size += check_formatage(format[i]);
+			if (format[i] == '\0')
 				return (-1);
-			else if (format[i] < '!' && format[i + 1] == '\0')
-			{
-				_putchar(format[i]);
-				return (-1);
-			}
 		}
 		while (symbole[j].letter != '\0')
 		{
@@ -48,7 +54,15 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 			j++;
 		}
 		if (format[i])
+		{
+			if (symbole[j].letter == '\0' && format[i] != '%')
+			{
+				_putchar('%');
+				_putchar(format[i]);
+				size += 2;
+			}
 			i++;
+		}
 	}
 	return (size);
 }
