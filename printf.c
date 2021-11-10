@@ -11,10 +11,8 @@
 
 static int check_arg(va_list arg, char *format, format_t *symbole)
 {
-	int i, j, size;
+	int i = 0, j = 0, size = 0;
 
-	i = 0;
-	size = 0;
 	while (format[i])
 	{
 		while (format[i] && format[i] != '%')
