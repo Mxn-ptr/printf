@@ -72,10 +72,15 @@ int print_String(va_list s)
 	int size = 0;
 	unsigned char *str;
 
-	str = va_arg(s, char *);
+	str = va_arg(s, unsigned char *);
+	if (str == NULL)
+	{
+		_putstr("\\x00");
+		return (4);
+	}
 	while (str[i])
 	{
-		if ((str[i] > 0 || str[i] < 32 || str[i] >= 127) && str[i])
+		if ((str[i] < 32 || str[i] >= 127) && str[i])
 		{
 			_putstr("\\x");
 			hex_S(str[i], &size);
