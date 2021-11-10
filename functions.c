@@ -20,7 +20,7 @@ int print_char(va_list a)
 /**
  * print_string - print a string
  * @s: string to print
- * Return: i - 1
+ * Return: i
  */
 
 int print_string(va_list s)
