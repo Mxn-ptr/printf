@@ -60,3 +60,39 @@ int print_rot13(va_list s)
 	}
 	return (i);
 }
+
+/**
+* print_String - print value of not printable char
+* @s: string
+* Return: length of the string
+*/
+int print_String(va_list s)
+{
+	int i = 0;
+	int size = 0;
+	char *str;
+
+	str = va_arg(s, char *);
+	if (str == NULL)
+	{
+		_putstr("(null)");
+		return (6);
+	}
+	while (str[i])
+	{
+		if ((str[i] < ' ' || str[i] > 126) && str[i])
+		{
+			_putstr("\\x");
+			hex_up(str[i], &size);
+			size += 2;
+			i++;
+		}
+		else
+		{
+			_putchar(str[i]);
+			i++;
+			size++;
+		}
+	}
+	return (size);
+}

@@ -89,6 +89,7 @@ int _printf(const char *format, ...)
 		{'u', print_unsigned},
 		{'r', print_rev},
 		{'R', print_rot13},
+		{'S', print_String},
 		{'\0', NULL},
 	};
 

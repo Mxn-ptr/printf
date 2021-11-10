@@ -25,5 +25,6 @@ int print_hex_low(va_list b);
 int print_unsigned(va_list u);
 int print_rev(va_list strings);
 int print_rot13(va_list s);
+int print_String(va_list s);
 
 #endif /*FORMAT_H*/
