@@ -70,6 +70,7 @@ int print_String(va_list s)
 {
 	int i = 0;
 	int size = 0;
+	int check = 0;
 	unsigned char *str;
 
 	str = va_arg(s, unsigned char *);
@@ -83,7 +84,7 @@ int print_String(va_list s)
 		if ((str[i] < 32 || str[i] >= 127) && str[i])
 		{
 			_putstr("\\x");
-			hex_S(str[i], &size);
+			hex_S(str[i], &size, &check);
 			size += 2;
 			i++;
 		}
