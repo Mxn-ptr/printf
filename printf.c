@@ -34,6 +34,11 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 			}
 			else if (format[i] == '\0')
 				return (-1);
+			else if (format[i] < '!' && format[i + 1] == '\0')
+			{
+				_putchar(format[i]);
+				return (-1);
+			}
 		}
 		while (symbole[j].letter != '\0')
 		{
