@@ -32,6 +32,8 @@ static int check_arg(va_list arg, char *format, format_t *symbole)
 				size++;
 				_putchar('%');
 			}
+			else if (format[i] == '\0')
+				return (-1);
 		}
 		while (symbole[j].letter != '\0')
 		{
@@ -77,8 +79,6 @@ int _printf(const char *format, ...)
 		return (-1);
 
 	va_start(argument, format);
-	if (format[1] == '\0' && format[0] == '%')
-		return (-1);
 	bytes = check_arg(argument, (char *)format, symbole);
 	va_end(argument);
 	return (bytes);
