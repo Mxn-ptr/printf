@@ -83,7 +83,7 @@ int print_String(va_list s)
 		if ((str[i] < ' ' || str[i] > 126) && str[i])
 		{
 			_putstr("\\x");
-			hex_up(str[i], &size);
+			hex_S(str[i], &size);
 			size += 2;
 			i++;
 		}
