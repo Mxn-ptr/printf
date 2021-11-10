@@ -20,11 +20,11 @@ The function _printf is a variadic function which prints a string according to a
 
 | Specifiers  | Description |
 | ------------- |:-------------:|
-| `%c`          | Print a single character     |
-| `%s`          | Print a string of characters |
-| `%d`          | Print a decimal number       |
-| `%i`          | Print a integer              |
-| `%u`          | Print a unsigned int         |
+| `%c`          | Prints a single character     |
+| `%s`          | Prints a string of characters |
+| `%d`          | Prints a decimal number       |
+| `%i`          | Prints an integer              |
+| `%u`          | Prints an unsigned int         |
 | `%b`          | Convert a decimal number to binary and prints it|
 | `%o`          | Convert a decimal number to octal and prints it |
 | `%x`| Convert a decimal number to hexadecimal and prints it in lowercase|
