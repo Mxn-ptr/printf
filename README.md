@@ -4,7 +4,7 @@
 
 This repository is a project during the first year of Holberton School.
 
-It is to be done in duo and consists in recoding the famoous printf function
+It is to be done in duo and consists in recoding the famous printf function.
 
 # _printf
 
@@ -22,7 +22,8 @@ The function _printf is a variadic function which prints a string according to a
 | ------------- |:-------------:|
 | `%c`          | Print a single character     |
 | `%s`          | Print a string of characters |
-| `%d` or `%i`  | Print a decimal number       |
+| `%d`          | Print a decimal number       |
+| `%i`          | Print a integer              |
 | `%u`          | Print a unsigned int         |
 | `%b`          | Convert a decimal number to binary and prints it|
 | `%o`          | Convert a decimal number to octal and prints it |
