@@ -73,28 +73,27 @@ void hex_low(unsigned int nb, int *size)
 }
 
 /**
-* hex_S - convert decimal to hexadecimal Uppercase 2 digit
+* hex_S - convert decimal to hexadecimal Uppercase
 * @nb: number
 * @size: size for printf
-* @check: check if number is on 2 digit
-*
 */
-void hex_S(unsigned int nb, int *size, int *check)
+void hex_S(unsigned int nb, int *size)
 {
+	int check = 1;
+
 	if (nb / 16)
 	{
 		hex_up(nb / 16, size);
-		*check = 1;
 	}
-	if (*check == 0 && *size)
+	if (check == 1)
 	{
 		_putchar('0');
 		*size += 1;
-		*check = 0;
 	}
 	*size += 1;
 	if (nb % 16 < 10)
 		_putchar('0' + nb % 16);
 	else
 		_putchar('A' + ((nb % 16) - 10));
+	check = 0;
 }
