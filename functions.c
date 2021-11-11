@@ -58,3 +58,21 @@ int print_int(va_list s)
 	print_number(nb, &n);
 	return (n);
 }
+
+/**
+ * print_addr - print address of variable
+ * @ptr: va_list for printf
+ * Return: number to print
+ */
+
+int print_addr(va_list ptr)
+{
+	int n = 5;
+	void *nb;
+
+	_putstr("0x7ff");
+	nb = va_arg(ptr, void *);
+	hex_addr((unsigned long int)nb, &n);
+
+	return (n);
+}

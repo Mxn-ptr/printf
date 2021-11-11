@@ -90,6 +90,7 @@ int _printf(const char *format, ...)
 		{'r', print_rev},
 		{'R', print_rot13},
 		{'S', print_String},
+		{'p', print_addr},
 		{'\0', NULL},
 	};
 

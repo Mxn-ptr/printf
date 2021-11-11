@@ -97,3 +97,5 @@ void hex_S(unsigned int nb, int *size)
 		_putchar('A' + ((nb % 16) - 10));
 	check = 0;
 }
+
+
