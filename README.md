@@ -49,6 +49,6 @@ The commande to compile your files is :
 
 This project was created by Jordan Mpounza and Maxence Potier.
 
-- Github of Jordan Mpounza : https://github.com/ozswar94
+- Github of ozswar94 : https://github.com/ozswar94
 
 - Github of Maxence Potier : https://github.com/Mxn-ptr
